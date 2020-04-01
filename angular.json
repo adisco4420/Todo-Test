@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "vaizle-test"
+    }
+  },
+  "defaultProject": "vaizle-test",
+  "cli": {
+    "analytics": "c605ff98-d1a9-4484-aba1-0d37fb78dc0d"
+  }
 }

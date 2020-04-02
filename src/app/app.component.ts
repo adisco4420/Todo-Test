@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   todoID = 1;
-  title = 'vaizle-test';
+  title = 'todo-test';
 
   renderCompleted() {
     alert('render completed');

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "vaizle-test": {
+    "todo-test": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/vaizle-test",
+            "outputPath": "dist/todo-test",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "vaizle-test:build"
+            "browserTarget": "todo-test:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "vaizle-test:build:production"
+              "browserTarget": "todo-test:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "vaizle-test:build"
+            "browserTarget": "todo-test:build"
           }
         },
         "test": {
@@ -114,18 +114,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "vaizle-test:serve"
+            "devServerTarget": "todo-test:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "vaizle-test:serve:production"
+              "devServerTarget": "todo-test:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "vaizle-test",
+  "defaultProject": "todo-test",
   "cli": {
     "analytics": "c605ff98-d1a9-4484-aba1-0d37fb78dc0d"
   }

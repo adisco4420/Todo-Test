@@ -28,4 +28,20 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('.content span').textContent).toContain('vaizle-test app is running!');
   });
+  it('should expect solution function return a  Dictionary', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    const data = {'2019-01-01': 100, '2019-01-04': 115};
+    const result = {};
+    const func = app.solution(data);
+    expect(func).toBeInstanceOf(Object);
+  });
+  it('should expect solution function to return missing dates', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    const data = {'2019-01-01': 100, '2019-01-04': 115};
+    const result = {'2019-01-01': 100, '2019-01-02': 105, '2019-01-03': 110, '2019-01-04': 115};
+    const func = app.solution(data);
+    expect(func).toEqual(result);
+  });
 });

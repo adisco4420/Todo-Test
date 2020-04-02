@@ -1,1 +1,18 @@
-<p>todo works!</p>
+<div>
+    <a class="card text-center" >
+        <div *ngIf="!error">
+            <ng-container *ngIf="todo; else loading">
+                <h2>{{todo.title}}</h2>
+                <h3>{{todo.completed ? 'Done' : 'In Progress'}}</h3>
+            </ng-container>
+            <ng-template #loading>
+                <h4>Loading todo....</h4>
+            </ng-template>
+        </div>
+        <div *ngIf="error">
+            <h4 class="text-danger">{{error}}</h4>
+            <button (click)="fetchTodo()" class="btn btn-primary">Try Again</button>
+        </div>
+    </a>
+
+</div> 
